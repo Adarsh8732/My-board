@@ -2,6 +2,10 @@
   "name": "3.open_board",
   "version": "1.0.0",
   "main": "canvas.js",
+  "engines": {
+    "node": "16.15.0",
+    "npm":"8.5.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"node app.js"
