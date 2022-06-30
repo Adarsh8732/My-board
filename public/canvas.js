@@ -127,7 +127,7 @@ undo.addEventListener("click",(e)=>{
     if(track==0){
         return;
     }
-    console.log("inside undo Canvas");
+    // console.log("inside undo Canvas");
 
     track--;
     let data = {
@@ -152,7 +152,7 @@ redo.addEventListener("click",(e)=>{
 })
 
 function undoRedoCanvas(trackObj){
-    console.log("inside undoRedo Canvas");
+    // console.log("inside undoRedo Canvas");
     track = trackObj.trackValue;
     undoRedoTracker = trackObj.undoRedoTracker;
     let url = undoRedoTracker[track];
