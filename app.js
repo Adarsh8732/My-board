@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.static("public"));
 
-let port = 5000;
+let port = process.env.PORT || 5000;
 
 let server = app.listen(port,()=>{
     console.log("Listening to port"+port);
@@ -25,7 +25,7 @@ let io = socket(server,{
 io.on("connection",(socket)=>{
     console.log("connection made");
     socket.on("beginPath",(data)=>{
-        console.log("beginpath in app.js")
+        // console.log("beginpath in app.js")
         io.sockets.emit("beginPath",data);
     })
     socket.on("drawStroke",(data)=>{
