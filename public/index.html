@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-2/css/all.min.css"
+        integrity="sha512-61a6zi50gYXGgd/n9+ZT2/RKnXr6lkRoWlS88AjFdoUHaIDnyBAcoE0Vs/QDU3lK3nCcUowNDqmQ8WaV0yT4qw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="options-cont">
+        <i class="fas fa-bars option-open"></i>
+    </div>
+    <div class="tools-cont open-tools">
+        <img class="pen" src="Icons/Pencil.svg">
+        <img class="eraser" src="Icons/Eraser.svg">
+        <img class="download" src="Icons/Download.svg">
+        <img class="upload" src="Icons/Upload.svg">
+        <img class="sticky" src="Icons/StickyNote.svg">
+        <img class="redo" src="Icons/Redo.svg">
+        <img class="undo" src="Icons/Undo.svg">
+    </div>
+    <div class="pen-action-cont">
+        <div class="pen-width-cont">
+            <input type="range" min="2" max="10" value="3" class="pen-width">
+        </div>
+        <div class="pen-color-cont">
+            <div class="black pen-color"></div>
+            <div class="red pen-color"></div>
+            <div class="blue pen-color"></div>
+        </div>
+    </div>
+    <div class="eraser-action-cont">
+        <input type="range" min="2" max="10" value="3" class="eraser-width">
+    </div>
+    <canvas></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.5.0/socket.io.js" integrity="sha512-ttqbKrGZiTtSLguBZ2xNvZrhUv02IO/TRq5U6TG5TK90wbaXWup5kIJ1A1tLzjOk5Mea/G4seVNrU+lwTLfAzA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let socket = io.connect("http://localhost:5000");
+    </script>
+    <script src="./tools.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+</html>
